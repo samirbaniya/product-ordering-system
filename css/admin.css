@@ -1,0 +1,53 @@
+/*
+Author : Samir Baniya
+Contact : samirbaniya500@gmail.com
+*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+.wrapper{
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+.text-center {
+    text-align: center;
+}
+.logo {
+    width: 15%;
+    border: 1px solid red;
+    float: left;
+}
+.img-responsive {
+    width: 100%;
+}
+.menu{
+    margin-top: 68px;
+    font-size: 25px;
+}
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    display: inline;
+    padding: 0 1%;
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+    color: #ff6b81;
+}
+a:hover {
+    color: #ff4757;
+}
+.clearfix {
+    clear: both;
+    float: none;
+}
+.text-right {
+    text-align: right;
+}
