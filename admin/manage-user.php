@@ -32,29 +32,7 @@
     <!-- Body Section Starts -->
     <section class="content">
         <div class="wrapper">
-           <div class="col-4 text-center">
-            <h2>4</h2>
-            <br>
-            <h2>Categories</h2>
-           </div>
-
-           <div class="col-4 text-center">
-            <h2>4</h2>
-            <br>
-            <h2>Categories</h2>
-           </div>
-
-           <div class="col-4 text-center">
-            <h2>4</h2>
-            <br>
-            <h2>Categories</h2>
-           </div>
-
-           <div class="col-4 text-center">
-            <h2>4</h2>
-            <br>
-            <h2>Categories</h2>
-           </div>
+       
         </div>
     </section>
     <!-- Body Section Ends -->
