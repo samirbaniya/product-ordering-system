@@ -8,7 +8,6 @@ Contact : samirbaniya500@gmail.com
     font-family: Arial, Helvetica, sans-serif ;
 }
 .wrapper{
-    border: 1px solid red;
     width: 80%;
     margin: 0 auto;
     padding: 1%;
@@ -18,14 +17,16 @@ Contact : samirbaniya500@gmail.com
 }
 .logo {
     width: 15%;
-    border: 1px solid red;
     float: left;
 }
 .img-responsive {
     width: 100%;
 }
+.menubar{
+    border-bottom: 3px solid gray;
+}
 .menu{
-    line-height: 10px;
+    line-height: 155px;
     /* margin-top: 68px; */
     font-size: 25px;
 }
@@ -41,6 +42,7 @@ Contact : samirbaniya500@gmail.com
 .menu ul li a {
     text-decoration: none;
     color: #ff6b81;
+    font-weight: bold;
 }
 a:hover {
     color: #ff4757;
@@ -60,13 +62,29 @@ a:hover {
 }
 .footer-link{
     text-decoration: none;
-    color:;
+    color: ;
 }
 .footer-link:hover{
     color:aqua
 }
 .col-4{
-
-    width: 20%;
+    background-color: white;
+    width: 18%;
     float: left;
+    margin: 1%;
+    padding: 2%;
+}
+
+/*cotent CSS*/
+.content{
+    background-color: #a4b0be;
+    padding-top: 1% 0;
+}
+
+.heading{
+    color: #ff4757;
+    font-weight: 900;
+}
+.table{
+    width: 100%;
 }

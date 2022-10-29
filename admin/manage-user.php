@@ -1,49 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/admin.css">
-    <title>Admin Panel</title>
-</head>
-<body>
-    <!-- Menu Section Starts -->
-    <section class="menubar">
-        <div class="wrapper">
-            <div class="logo">
-                <img src="../images/hamroSekuwaLogo.png" class="img-responsive" alt="logo">
-            </div>
-            <div class="menu text-center">
-                <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Users</a></li>
-                    <li><a href="#">Category</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Order</a></li>
-                </ul>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-
-    </section>
-    <!-- Menu Section Ends -->
+<?php include('common/header.php') ?>
 
     <!-- Body Section Starts -->
     <section class="content">
         <div class="wrapper">
-       
+             <strong class="heading">MANAGE USERS</strong>
+
+             <!-- Users Table -->
+                <table class="table">
+                    <thead>
+                       <tr>
+                            <th>SN</th>
+                            <th>FullName</th>
+                            <th>UserName</th>
+                            <th>Password</th>
+                            <th>Action</th>
+                       </tr> 
+                    </thead>
+                    <tbody>
+                        <tr>
+                           <td>1</td> 
+                           <td>sam</td>
+                           <td>samstar</td>
+                           <td>something</td>
+                           <td>
+                            <button class="btn btn-primary">
+                                Edit User
+                            </button>
+                            <button class="btn btn-secondary">
+                                Delete User
+                            </button>
+                           </td>
+                        </tr>
+                    </tbody>
+                </table>
+             <!-- Users Table End -->
         </div>
     </section>
     <!-- Body Section Ends -->
 
-    <!-- Footer Section Starts -->
-    <section class="footer">
-        <div class="wrapper text-center">
-            <p>Copyright <?php echo date('Y'); ?>.</p>
-            <p> All Rights Reserves. Designed and Developed by <a class="footer-link" href="#">Samir Baniya</a></p>
-        </div>
-    </section>
-    <!-- Footer Section Ends -->
+<?php include('common/footer.php') ?>
 </body>
 </html> 

@@ -3,7 +3,7 @@
     <!-- Body Section Starts -->
     <section class="content">
         <div class="wrapper">
-             <strong class="heading">MANAGE PRODUCT</strong>
+             <strong class="heading">MANAGE USERS</strong>
         </div>
     </section>
     <!-- Body Section Ends -->
