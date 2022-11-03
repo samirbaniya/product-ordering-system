@@ -3,7 +3,11 @@
     <!-- Body Section Starts -->
     <section class="content">
         <div class="wrapper">
-             <strong class="heading">MANAGE USERS</strong>
+             <h1 class="heading">MANAGE USERS</h1>
+
+             <br>
+                <a class="btn btn-secondary user-add" href="add-user.php"> Add User</a>
+             <br>
 
              <!-- Users Table -->
                 <table class="table">
@@ -23,12 +27,12 @@
                            <td>samstar</td>
                            <td>something</td>
                            <td>
-                            <button class="btn btn-primary">
+                            <a class="btn btn-primary" href="#">
                                 Edit User
-                            </button>
-                            <button class="btn btn-secondary">
+                            </a>
+                            <a class="btn btn-danger" href="#">
                                 Delete User
-                            </button>
+                            </a>
                            </td>
                         </tr>
                     </tbody>

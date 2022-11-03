@@ -37,5 +37,3 @@
     <!-- Body Section Ends -->
 
 <?php include('common/footer.php') ?>
-</body>
-</html> 
