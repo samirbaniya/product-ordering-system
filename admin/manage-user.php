@@ -4,8 +4,9 @@
     <section class="content">
         <div class="wrapper">
              <h1 class="heading">MANAGE USERS</h1>
-
-             <br>
+             
+             <?php include('config/session.php') ?>
+             <br><br>
                 <a class="btn btn-secondary user-add" href="add-user.php"> Add User</a>
              <br>
 
@@ -43,5 +44,3 @@
     <!-- Body Section Ends -->
 
 <?php include('common/footer.php') ?>
-</body>
-</html> 
