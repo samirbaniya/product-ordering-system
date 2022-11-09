@@ -134,3 +134,11 @@ a{
 .text-right{
     text-align: right;
 }
+.success{
+    color: white;
+    background-color: #2ed573;
+}
+.error{
+    color: #ff4757;
+    background-color: white;
+}
