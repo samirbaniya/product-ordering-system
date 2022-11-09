@@ -17,7 +17,7 @@ $exec = mysqli_query($conn,$sql);
 if($exec == TRUE){
     $_SESSION['message'] = '<div class="success"> Users Deleted Succesfully </div>';
 }else{
-    $_SESSION['message'] = '<div class="error"> Users Deleted Succesfully </div>';
+    $_SESSION['message'] = '<div class="error"> Something Went Wrong. Try Again </div>';
 }
 header('location:'.APP_URL.'admin/manage-user.php');
 ?>

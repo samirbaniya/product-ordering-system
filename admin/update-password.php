@@ -9,22 +9,6 @@
             <?php 
             //getting id
             $id = $_GET['id'];
-            
-            //making sql to select value
-            $sql = "SELECT * FROM users where id='$id'";
-
-            //execute the query
-            $exec = mysqli_query($conn,$sql);
-
-            //count the number of rows
-            $count = mysqli_num_rows($exec);
-
-            if($count == 1){
-                while($rows=mysqli_fetch_assoc($exec)){
-                    $id = $rows['id'];
-                }
-            }
-
             ?>
              <!-- Users Add Form -->
                 <form method="post" action="">
@@ -79,13 +63,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if($exec == TRUE){
             //count the number of rows
             $count = mysqli_num_rows($exec);
+
             if($count==1){
-               var_dump($new_password);
                     if($new_password == $confirm_password){
                         //creating update $sql
                         $sql = "UPDATE users SET
                                 password='$new_password',
-                                WHERE id='$id' AND password='$old_password'";
+                                WHERE id=$id AND password='$old_password'";
 
                                 //execute the query
                                 $execute = mysqli_query($conn, $sql);
@@ -98,17 +82,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 }else{
                                     //if error
                                     $_SESSION['message'] = '<div class="error">Something went wrong! Please try again .</div>';
-                                    header('location:'.APP_URL.'admin/update-password.php');
+                                    header('location:'.APP_URL.'admin/update-password.php?id='.$id);
                                 }
                     }else{
                         $_SESSION['message'] = '<div class="error">Please confirm your password.</div>';
-                        header('location:'.APP_URL.'admin/update-password.php');
+                        header('location:'.APP_URL.'admin/update-password.php?id='.$id);
                     }
                 
+            }else{
+                $_SESSION['message'] = '<div class="error">Could not find the User.</div>';
+                header('location:'.APP_URL.'admin/update-password.php?id='.$id);
             }
         }else{
-                $_SESSION['message'] = '<div class="error">Could not find the User.</div>';
-        }
+                $_SESSION['message'] = '<div class="error">Could not execute the query.</div>';
+                header('location:'.APP_URL.'admin/update-password.php?id='.$id);
+            }
     }
 }
 ?>

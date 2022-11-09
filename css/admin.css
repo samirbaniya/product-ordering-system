@@ -122,8 +122,8 @@ a{
     background-color: #ff4757;
 }
 .btn-danger:hover{
-    background-color: #ff6b81;
-    color: white;
+    background-color: white;
+    color: #ff6b81;
 }
 .form-control{
     width: 80%;
@@ -139,6 +139,19 @@ a{
     background-color: #2ed573;
 }
 .error{
-    color: #ff4757;
-    background-color: white;
+    color: white;
+    background-color: #ff4757;
+}
+/* Login page CSS */
+.login{
+    border: 1px solid red;
+    width: 20%;
+    margin: 10% auto;
+    padding: 2%;
+}
+.form-control-login{
+    width: 50%;
+    padding: 1%;
+    border-radius: 5px;
+    border: 1px solid #a4b0be;
 }
