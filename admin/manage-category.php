@@ -16,15 +16,15 @@
                        <tr>
                             <th>SN</th>
                             <th>Title</th>
-                            <th>Slug</th>
-                            <th>ImageName</th>
+                            <th>Image</th>
                             <th>Featured</th>
                             <th>Status</th>
+                            <th>Action</th>
                        </tr> 
                     </thead>
                     <tbody>
                         <?php 
-                        //making the sql to fetch the data from users table
+                        //making the sql to fetch the data from categories table
                         $sql = "SELECT * FROM `categories`";
                         
                         //execute the query
@@ -39,24 +39,29 @@
                                 while( $rows = mysqli_fetch_assoc($exec)){
                                     $id = $rows['id'];
                                     $title = $rows['title'];
-                                    $slug = $rows['slug'];
-                                    $image_name = $rows['image_name'];
+                                    $current_image = $rows['image_name'];
                                     $featured = $rows['featured'];
                                     $status = $rows['status'];
                                     ?>
                                     <tr>
                                         <td><?php echo $sn++; ?></td>
                                         <td><?php echo $title; ?></td>
-                                        <td><?php echo $slug; ?></td>
-                                        <td><?php echo $image_name; ?></td>
+                                        <td><?php echo $current_image; ?></td>
                                         <td><?php echo $featured; ?></td>
                                         <td><?php echo $status; ?></td>
-                                        
-                                    </tr>
+                                        <td>
+                                    <a class="btn btn-primary" href="<?php  echo APP_URL; ?>admin/edit-category.php?id=<?php echo $id; ?>">
+                                Edit Category
+                            </a>
+                                <a class="btn btn-danger" href="<?php  echo APP_URL; ?>admin/delete-category.php?id=<?php echo $id; ?>">
+                                    Delete Category
+                                </a>
+                                    </td>
+                                </tr>
                                     <?php 
                                 }  
                             }else{
-                                echo'<tr><td colspan="4">No rows to display</td></tr>';
+                                echo'<tr><td colspan="6" class="text-center">No rows to display</td></tr>';
                             }
                         }
                         
