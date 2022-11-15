@@ -47,7 +47,6 @@
                                         <td><?php echo $sn++; ?></td>
                                         <td><?php echo $title; ?></td>
                                         <?php
-                                        if($current_image)
                                         if($current_image != ""){
                                             ?>
                                             <td><img width="100" height="100" src="../images/category/<?php echo $current_image; ?>" alt="<?php echo $current_image; ?>"></td>

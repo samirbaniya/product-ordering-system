@@ -82,7 +82,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 header('location:'.APP_URL.'admin/manage-user.php');
             }else{
                 $_SESSION['message'] = '<div class="error"> Could not Edit User Instantly. Try Again </div>';
-                header('location:'.APP_URL.'admin/edit-user.php');
+                header('location:'.APP_URL.'admin/edit-user.php?id='.$id);
             }
         }else{
             die("Connection Failed".mysqli_connect_error());
