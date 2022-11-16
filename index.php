@@ -86,7 +86,7 @@
                            ?>
                             <div class="box">
                                 <div class="box-img">
-                                    <img src="images/menu-pizza.jpg" <?php echo $pro_image; ?> alt="<?php echo $pro_title; ?>" class="img-responsive img-rounded">
+                                    <img src="images/product/<?php echo $pro_image; ?>" alt="<?php echo $pro_title; ?>" class="img-responsive img-rounded">
                                 </div>
                                 <div class="box-desc">
                                     <h4><?php echo $pro_title; ?></h4>

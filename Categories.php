@@ -11,91 +11,47 @@
     </section>
     <!--Search Ends Here-->
 
-    <!--Categories Begins Here-->
-    <section class="categories">
+<!--Categories Begins Here-->
+<section class="categories">
         <div class="container">
             <h2 class="text-center">Categories</h2>
+            <?php
+                //create the sql to pull the categories
+                $sql = "SELECT * FROM CATEGORIES WHERE status='yes'";
 
-            <div class="card float-container">
-                <img src="images/pizza.jpg" alt="pizza" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">PIZZA</h3>
-            </div>
+                //execute the query using connection
+                $execute = mysqli_query($conn,$sql);
 
-            <div class="card float-container">
-                <img src="images/burger.jpg" alt="burger" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">BURGER</h3>
-            </div>
+                //if execution is correctly submitted
+                if($execute == TRUE){
 
-            <div class="card float-container">
-                <img src="images/momo.jpg" alt="Steam chicken MOMO" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Steam chicken MOMO</h3>
-            </div>
+                    //count the number of rows
+                    $count = mysqli_num_rows($execute);
 
-            <div class="card float-container">
-                <img src="images/sandwich.jpg" alt="Sandwitch" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Sandwich</h3>
-            </div>
+                    if($count > 0){
+                       //if count is greater than 0 we will execute the loop
 
-            <div class="card float-container">
-                <img src="images/noodles.jpg" alt="Noodles" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Noodles</h3>
-            </div>
-
-            <div class="card float-container">
-                <img src="images/1fried chicken momo.jpg" alt="Fried Chicken Momo" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Fried Chicken Momo</h3>
-            </div>
-
-            <div class="card float-container">
-                <img src="images/french fries.jpg" alt="French Fries" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">French Fries</h3>
-            </div>
-
-            <div class="card float-container">
-                <img src="images/dal bhat masu.jpg" alt="Dal bhat(masu)" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Dal bhat(masu)</h3>
-            </div>
-
-            <div class="card float-container">
-                <img src="images/buff momo.jpg" alt="C Buff MOMO" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">C Buff MOMO</h3>
-            </div>
-
-            <div class="card float-container">
-                <img src="images/chowmein.jpg" alt="Chowmein" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Chowmein</h3>
-            </div>
-
-            <div class="card float-container">
-                <img src="images/samosa.jpg" alt="Samosa" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Samosa</h3>
-            </div>
-
-            <div class="card float-container">
-                <img src="images/chicken chilly.jpg" alt="Chicken Chilly" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Chicken Chilly</h3>
-            </div>
-
-            <div class="card float-container">
-                <img src="images/chickenChowmein.jpg" alt="Chicken Chwmein<" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Chicken Chowmein</h3>
-            </div>
-
-            <div class="card float-container">
-                <img src="images/chillySausage.jpg" alt="Chilly Sausage" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Chilly Sausage</h3>
-            </div>
-
-            <div class="card float-container">
-                <img src="images/dal bhat.jpg" alt="Dal bhat" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Dal bhat</h3>
-            </div>
-
-            <div class="card float-container">
-                <img src="images/sbuffmomo.jpg" alt="Steam Buff MOMO" class="img-responsive img-rounded">
-                <h3 class="float-text text-white">Steam Buff MOMO</h3>
-            </div>
-
+                        while($rows=mysqli_fetch_assoc($execute)){
+                            $id = $rows['id'];
+                            $category_title = $rows['title'];
+                            $category_image = $rows['image_name'];
+                            ?>
+                            <a href="#">
+                                <div class="card float-container">
+                                    <img src="images/category/<?php echo $category_image; ?>" alt="<?php echo$category_title; ?>" class="img-responsive img-rounded">
+                                    <h3 class="float-text text-white"><?php echo$category_title; ?></h3>
+                                </div>
+                            </a>
+                            <?php
+                        }
+                    }else{
+                        //
+                        echo "<div class='text-center'>No category Found</div>";
+                    }
+                    
+                }
+            ?>
+          
             <div class="clearfix"></div>
         </div>
     </section>
