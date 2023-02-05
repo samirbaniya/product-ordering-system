@@ -9,7 +9,7 @@
     $sql = "SELECT * FROM products where id=$product_id";
 
     //execute the query
-    $execute = mysqli_query($conn, $sql);
+    $execute = mysqli_query($conn,$sql);
 
     //check if executed
     if($execute == TRUE){

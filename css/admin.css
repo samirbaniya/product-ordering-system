@@ -51,8 +51,11 @@ a:hover {
     clear: both;
     float: none;
 }
-.text-right {
+.text-right{
     text-align: right;
+}
+.text-left{
+    text-align: left;
 }
 
 /*footer CSS*/
@@ -154,4 +157,17 @@ a{
     padding: 1%;
     border-radius: 5px;
     border: 1px solid #a4b0be;
+}
+.bordertable{
+    border: 1px solid black;
+    border-spacing: 0px;
+}
+.bordertable tr th{
+    text-align: left;
+    padding: 1%;
+    border: 1px solid black;padding: 4px;
+}
+.bordertable tr td{
+    padding: 1%;
+    border: 1px solid black;padding: 4px;
 }

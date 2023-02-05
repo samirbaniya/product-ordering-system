@@ -11,7 +11,7 @@
              <br> -->
 
              <!-- Products Table -->
-                <table class="table">
+                <table class="table bordertable">
                     <thead>
                        <tr>
                             <th>SN</th>
