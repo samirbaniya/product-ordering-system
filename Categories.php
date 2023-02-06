@@ -38,6 +38,7 @@
                             ?>
                             <a href="#">
                                 <div class="card float-container">
+                                <a href="product.php">
                                     <img src="images/category/<?php echo $category_image; ?>" alt="<?php echo$category_title; ?>" class="img-responsive img-rounded">
                                     <h3 class="float-text text-white"><?php echo$category_title; ?></h3>
                                 </div>

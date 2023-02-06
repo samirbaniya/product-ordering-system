@@ -37,7 +37,7 @@
                             $category_title = $rows['title'];
                             $category_image = $rows['image_name'];
                             ?>
-                            <a href="#">
+                            <a href="categories.php">
                                 <div class="card float-container">
                                     <img src="images/category/<?php echo $category_image; ?>" alt="<?php echo$category_title; ?>" class="img-responsive img-rounded">
                                     <h3 class="float-text text-white"><?php echo$category_title; ?></h3>
