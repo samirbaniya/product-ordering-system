@@ -2,11 +2,11 @@
  include('layout/header.php'); 
 ?>
 <!--Search Bar Begins Here-->
-    <section class="search text-center">
+<section class="search text-center">
         <div class="container">
-            <form>
-                <input type="search" name="search" id="search" placeholder="Search for Food here...">
-                <input type="button" value="Search" class="btn btn-primary">
+            <form method="GET" action="search-results.php">
+                <input type="search" name="query" id="search" placeholder="Search for Food here...">
+                <input type="submit" value="Search" class="btn btn-primary">
             </form>
         </div>
     </section>
