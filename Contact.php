@@ -16,7 +16,7 @@
                         <label for="">Message</label>
                         <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Enter your message.."></textarea>
         
-                        <button class="btn btn-primary">Submit</button>
+                        <a href="index.php"><h3 class="btn btn-primary">Submit</h3></a>
                     </form>
                 </div>
             </section>
