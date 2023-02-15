@@ -23,7 +23,7 @@
                     <li><a href="index.php">Home</a></li>
                     <li><a href="Categories.php">Categories</a></li>
                     <li><a href="product.php">Product</a></li>
-                    <li><a href="Contact.php">Contact</a></li>
+                    
                 </ul>
             </div>
             <div class="clearfix"></div>

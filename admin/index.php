@@ -6,38 +6,86 @@
              <strong class="heading">DASHBOARD</strong>
 
             <div class="clearfix"></div>
-           
-           <div class="col-4 text-center">
-           <a href="manage-user.php">
-            <br>
-            <h2>Users</h2>
-            </a>
-           </div>
+    
+                <?php 
+                    if(isset($_SESSION['login']))
+                    {
+                        echo $_SESSION['login'];
+                        unset($_SESSION['login']);
+                    }
+                ?>
+                <br><br>
 
-           <div class="col-4 text-center">
-           <a href="manage-category.php">
-            <br>
-            <h2>Categories</h2>
-            </a>
-           </div>
+                <div class="col-4 text-center">
 
-           <div class="col-4 text-center">
-           <a href="manage-product.php">
-            <br>
-            <h2>Products</h2>
-            </a>
-           </div>
+                    <?php 
+                        //Sql Query 
+                        $sql = "SELECT * FROM categories";
+                        //Execute Query
+                        $res = mysqli_query($conn, $sql);
+                        //Count Rows
+                        $count = mysqli_num_rows($res);
+                    ?>
 
-           <div class="col-4 text-center">
-           <a href="manage-order.php">
-            <br>
-            <h2>Orders</h2>
-            </a>
-           </div>
+                    <h1><?php echo $count; ?></h1>
+                    <br />
+                    Categories
+                </div>
 
-           <div class="clearfix"></div>
+                <div class="col-4 text-center">
+
+                    <?php 
+                        //Sql Query 
+                        $sql2 = "SELECT * FROM products";
+                        //Execute Query
+                        $res2 = mysqli_query($conn, $sql2);
+                        //Count Rows
+                        $count2 = mysqli_num_rows($res2);
+                    ?>
+
+                    <h1><?php echo $count2; ?></h1>
+                    <br />
+                    Foods
+                </div>
+
+                <div class="col-4 text-center">
+                    
+                    <?php 
+                        //Sql Query 
+                        $sql3 = "SELECT * FROM orders";
+                        //Execute Query
+                        $res3 = mysqli_query($conn, $sql3);
+                        //Count Rows
+                        $count3 = mysqli_num_rows($res3);
+                    ?>
+
+                    <h1><?php echo $count3; ?></h1>
+                    <br />
+                    Total Orders
+                </div>
+
+                
+                <div class="col-4 text-center">
+                    
+                    <?php 
+                        //Sql Query 
+                        $sql4 = "SELECT * FROM users";
+                        //Execute Query
+                        $res4 = mysqli_query($conn, $sql4);
+                        //Count Rows
+                        $count4 = mysqli_num_rows($res4);
+                    ?>
+
+                    <h1><?php echo $count4; ?></h1>
+                    <br />
+                    Total users
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div>
         </div>
-    </section>
+        <!-- Main Content Setion Ends -->
     <!-- Body Section Ends -->
 
 <?php include('common/footer.php') ?>
