@@ -80,7 +80,11 @@
                     <br />
                     Total users
                 </div>
-
+            <div class="contact-link">
+                <ul>
+                     <li><a href="manage-contact.php">CustomerFeedback</a></li>
+                </ul>
+            </div>
                 <div class="clearfix"></div>
 
             </div>
