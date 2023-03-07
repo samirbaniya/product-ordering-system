@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2023 at 09:43 AM
+-- Generation Time: Mar 07, 2023 at 02:38 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -50,6 +50,37 @@ INSERT INTO `categories` (`id`, `title`, `image_name`, `featured`, `status`) VAL
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `customer_name` varchar(100) NOT NULL,
+  `customer_email` varchar(100) NOT NULL,
+  `customer_feedback` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `customer_name`, `customer_email`, `customer_feedback`) VALUES
+(1, 'Jakeem Stout', 'sijylaj@mailinator.com', 'Ad atque voluptate r'),
+(2, 'Fletcher Harrell', 'wepivux@mailinator.com', 'Dolorem do debitis sab\r\ncd\r\nef\r\ng'),
+(3, 'Patrick Price', 'kydota@mailinator.com', 'Amet veniam blandi'),
+(4, 'Rae Atkinson', 'gunykudafi@mailinator.com', 'Aut consequatur cup'),
+(5, 'Olympia Solomon', 'bopaga@mailinator.com', 'Ut ducimus totam no'),
+(6, 'Lydia Stout', 'vimuf@mailinator.com', 'Illo earum non vitae'),
+(7, 'samir baniya', '9841558311', '“I love the avocado toast and the California focaccia”\r\n\r\n“Their brunch is awesome, I love the avocado toast and the California focaccia. Pizza is really good as well.” – Alison B.\r\n\r\n“Not just on the lower Cape…. anywhere!”\r\n\r\n“Best Pizza EVER! Not just on the lower Cape…. anywhere!” – Ellen H.\r\n\r\n“I will definitely be back!”\r\n\r\n“I was so impressed with my breakfast this morning! I tried the Fried Green Tomato Benedict and my boyfriend got the Crab Cakes Benedict. We both finished our whole plates and were so impressed with the quality of the food and the short amount of time it took to receive it. Our waitress was sweet and helpful. I will definitely be back!” – Julia L.\r\n\r\n“Always worth the stop.”\r\n\r\n“This is always our breakfast stop before heading home from vacation. Always delicious. Always great service. Always worth the stop.” – Kristine R.\r\n\r\n“I would recommend Fairway Restaurant.”\r\n\r\n“I won a $30. Gift card for Fairway Restaurant in Eastham from Cape 104.7 radio. Brought my sister for breakfast. The breakfast was crab cakes with spinach and poached eggs and hollandaise sauce. Jill got fried green tomatoes with spinach and poached eggs with hollandaise sauce. Both were Excellent. The restaurant is very clean. Professional Staff. I would recommend Fairway Restaurant.” – James T.\r\n\r\n“One of the best places…”\r\n\r\n“One of the best places I’ve eaten on Cape Cod. Great cocktails, awesome.” – Eric T.\r\n\r\n“Im from the south, thats saying a lot…”\r\n\r\n“Breakfast was delicious. Like a good homestyle country savory breakfast (and Im from the south, thats saying a lot)… Enjoyed the whole experience and definitely recommend this place for a place to eat on the cape.” – Ronnie E.\r\n\r\n“Best breakfast on the east coast!”'),
+(8, '', 'setojamucy@mailinator.com', 'sdfg\r\n'),
+(9, 'name', 'verav@mailinator.com', ''),
+(10, 'Solomon Hensley', 'zufyqy@mailinator.com', 'Est sequi voluptate '),
+(11, 'Garrison Barry', 'guhemofa@mailinator.com', 'Iste dolor quo minim'),
+(12, 'Jayme Pierce', 'lexo@mailinator.com', 'Excepturi excepturi ');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `orders`
 --
 
@@ -84,7 +115,16 @@ INSERT INTO `orders` (`id`, `product_id`, `price`, `quantity`, `total`, `custome
 (20, 7, '150.00', 153, '22950.00', 'Hashim Terrell', 'Ullamco placeat qui', 'pifanotoke@mailinator.com', '9287679100', 'Laboriosam quo corr', '2022-11-21 15:13:37', 'chicken pizza'),
 (21, 8, '120.00', 744, '89280.00', 'Kibo May', 'Et a esse nemo in ex', 'kehybydeli@mailinator.com', '9445191831', 'Non quia illo qui im', '2023-02-04 14:52:36', 'chicken '),
 (22, 8, '120.00', 2, '240.00', 'name', 'address', 'sallukhw@gmail.com', '9841558311', '', '2023-02-04 14:53:57', 'chicken '),
-(23, 7, '150.00', 7, '1050.00', 'samir baniya', 'BANEPA', 'samirbaniya500@gmail.com', '9841558311', 'hffcg', '2023-02-06 15:00:38', 'chicken pizza');
+(23, 7, '150.00', 7, '1050.00', 'samir baniya', 'BANEPA', 'samirbaniya500@gmail.com', '9841558311', 'hffcg', '2023-02-06 15:00:38', 'chicken pizza'),
+(24, 7, '150.00', 794, '119100.00', 'Quynn Whitley', 'Sed repudiandae exce', 'penipiwydi@mailinator.com', '9504057984', 'Sed ipsum distincti', '2023-02-15 14:38:45', 'chicken pizza'),
+(25, 7, '150.00', 443, '66450.00', 'Erin Cabrera', 'Modi reprehenderit ', 'wyqi@mailinator.com', '9910411980', 'Nulla ut ut amet el', '2023-02-16 03:14:51', 'chicken pizza'),
+(26, 8, '120.00', 675, '81000.00', 'Burton Boyer', 'Aperiam dolore et re', 'cowomof@mailinator.com', '9760756579', 'Incididunt illo repu', '2023-03-03 00:38:47', 'pizza'),
+(27, 8, '120.00', 401, '48120.00', 'Sierra Singleton', 'Perspiciatis id tem', 'davytyfe@mailinator.com', '9916677588', 'Molestiae laboris si', '2023-03-03 00:40:26', 'pizza'),
+(28, 8, '120.00', 794, '95280.00', 'Giselle Foster', 'Corporis autem perfe', 'jagobi@mailinator.com', '9599635837', 'Consectetur cum adi', '2023-03-03 00:41:15', 'pizza'),
+(29, 8, '120.00', 479, '57480.00', 'Hall Vaughan', 'Et velit molestiae q', 'tusarapa@mailinator.com', '9294830098', 'Vero dicta voluptate', '2023-03-03 00:43:15', 'pizza'),
+(30, 8, '120.00', 779, '93480.00', 'Tobias Bullock', 'Numquam esse volupt', 'qufeve@mailinator.com', '9382549145', 'Laborum dolore ipsum', '2023-03-03 00:44:23', 'pizza'),
+(31, 8, '120.00', 805, '96600.00', 'Baker Charles', 'Explicabo Ea amet ', 'refa@mailinator.com', '9474364205', 'Quas obcaecati sit ', '2023-03-03 00:47:04', 'pizza'),
+(32, 8, '120.00', 630, '75600.00', 'Karly Morris', 'Sequi necessitatibus', 'bylasig@mailinator.com', '9962062096', 'Dolorum ipsum quisq', '2023-03-03 00:47:17', 'pizza');
 
 -- --------------------------------------------------------
 
@@ -152,6 +192,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -180,10 +226,16 @@ ALTER TABLE `categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `products`
